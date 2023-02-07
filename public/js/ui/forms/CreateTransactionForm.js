@@ -25,6 +25,7 @@ class CreateTransactionForm extends AsyncForm {
       response.data.forEach(account => {
         const option = document.createElement('option');
         option.innerHTML = `${account.name}`;
+        option.setAttribute('value', `${account.id}`);
         select.appendChild(option);
       })
     });

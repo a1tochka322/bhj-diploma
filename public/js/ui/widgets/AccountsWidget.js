@@ -53,7 +53,6 @@ class AccountsWidget {
    * */
   update() {
     if (User.current()) {
-      console.log(User.current())
       this.clear();
       Account.list(User.current(), (err, response) => {
         response.data.forEach(item => {
